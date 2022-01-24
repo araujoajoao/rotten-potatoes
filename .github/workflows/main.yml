@@ -28,8 +28,8 @@ jobs:
             araujoajoao/rotten-potatoes:latest
             araujoajoao/rotten-potatoes:${{ github.run_number }}
   
-  CD:
-    runs-on: ubuntu-latest
+  name: CD
+  runs-on: ubuntu-latest
   
     steps:
       - uses: actions/checkout@v2
