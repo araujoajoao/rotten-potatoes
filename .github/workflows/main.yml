@@ -27,15 +27,15 @@ jobs:
           tags: |
             araujoajoao/rotten-potatoes:latest
             araujoajoao/rotten-potatoes:${{ github.run_number }}
-CD:
-  needs: [CI]
-  runs-on: ubuntu-latest
+  CD:
+    needs: [CI]
+    runs-on: ubuntu-latest
         
-  steps:
-    - uses: actions/checkout@v2
+    steps:
+        - uses: actions/checkout@v2
       
-    - name: Kubernetes set context
-      uses: Azure/k8s-set-context@v1.1
-      with:
-        method: kubeconfig
-        kubeconfig: ${{ secrets.K8S_CONFIG }}
+        - name: Kubernetes set context
+          uses: Azure/k8s-set-context@v1.1
+          with:
+            method: kubeconfig
+            kubeconfig: ${{ secrets.K8S_CONFIG }}
