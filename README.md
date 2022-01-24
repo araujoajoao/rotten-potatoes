@@ -1,13 +1,4 @@
-# rotten-potatoes
-
-## Configuração
-
-MONGODB_DB => Nome do database
-
-MONGODB_HOST => Host do MongoDB
-
-MONGODB_PORT => Posta de acesso ao MongoDB
-
-MONGODB_USERNAME => Usuário do MongoDB
-
-MONGODB_PASSWORD => Senha do MongoDB
+Criar o cluster Kubernetes com o seguinte comando:
+```
+k3d cluster create clusterconversao --agents 1 --servers 1 -p 8080:30000@loadbalancer
+```
