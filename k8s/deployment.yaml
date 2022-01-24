@@ -59,7 +59,7 @@ spec:
       - name: web
         image: araujoajoao/rotten-potatoes:v1
         ports:
-        - containerPort: 5000
+        - containerPort: 5001
         env:
         - name: MONGODB_DB
           value: admin
